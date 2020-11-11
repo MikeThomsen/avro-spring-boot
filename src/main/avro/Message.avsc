@@ -1,0 +1,17 @@
+{
+	"name": "MessageRecord",
+	"namespace": "com.test",
+	"type": "record",
+	"fields": [{
+			"name": "message",
+			"type": "string"
+		},
+		{
+			"name": "from",
+			"type": "string"
+		}, {
+			"name": "to",
+			"type": "string"
+		}
+	]
+}
