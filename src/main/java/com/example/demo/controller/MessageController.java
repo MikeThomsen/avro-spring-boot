@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import com.example.demo.MessageResponse;
 import com.test.MessageRecord;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,5 +27,10 @@ public class MessageController {
                 .setTo("john.smith")
                 .setMessage("Avro is awesomesauce!!")
                 .build();
+    }
+
+    @PostMapping
+    public MessageRecord save(@RequestBody MessageRecord input) {
+        return input;
     }
 }
